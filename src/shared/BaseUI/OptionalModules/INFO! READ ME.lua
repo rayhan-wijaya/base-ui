@@ -1,0 +1,2 @@
+-- You can safely delete particular modules under this
+-- OptionalModules folder if you do not wish to use them
