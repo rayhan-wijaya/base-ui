@@ -4,7 +4,7 @@ local core = require(script.Parent.Core)
 local applyStyles = nil
 
 if script.Parent.OptionalModules:FindFirstChild("Styles") then
-  applyStyles = require(script.Parent.OptionalModules.Styles.ApplyStyles)
+  applyStyles = require(script.Parent.OptionalModules.TailwindStyles.ApplyStyles)
 end
 
 local types = require(script.Parent.Types)
