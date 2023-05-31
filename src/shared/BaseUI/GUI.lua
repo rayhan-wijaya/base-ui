@@ -13,6 +13,15 @@ local gui = {
 
     return newScreenGui
   end,
+  frame = function (props: Frame & types.BaseUIProps, children: types.Children): Frame
+    local newFrame = Instance.new("Frame")
+
+    core.assignPropsToGuiObject(props, newFrame)
+    core.assignChildrenToParent(children, newFrame)
+    core.assignGuiObjectToRef(newFrame, props.Ref)
+
+    return newFrame
+  end,
 }
 
 return gui
