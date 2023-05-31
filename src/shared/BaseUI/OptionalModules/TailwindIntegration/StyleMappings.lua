@@ -83,6 +83,20 @@ local styleMappings: {[string]: GuiBase} = {
   ["bg-red-800"] = { BackgroundColor3 = Color3.fromHex("#991b1b") },
   ["bg-red-900"] = { BackgroundColor3 = Color3.fromHex("#7f1d1d") },
   ["bg-red-950"] = { BackgroundColor3 = Color3.fromHex("#450a0a") },
+
+  -- BG Orange
+
+  ["bg-orange-50"] = { BackgroundColor3 = Color3.fromHex("#fff7ed") },
+  ["bg-orange-100"] = { BackgroundColor3 = Color3.fromHex("#ffedd5") },
+  ["bg-orange-200"] = { BackgroundColor3 = Color3.fromHex("#fed7aa") },
+  ["bg-orange-300"] = { BackgroundColor3 = Color3.fromHex("#fdba74") },
+  ["bg-orange-400"] = { BackgroundColor3 = Color3.fromHex("#fb923c") },
+  ["bg-orange-500"] = { BackgroundColor3 = Color3.fromHex("#f97316") },
+  ["bg-orange-600"] = { BackgroundColor3 = Color3.fromHex("#ea580c") },
+  ["bg-orange-700"] = { BackgroundColor3 = Color3.fromHex("#c2410c") },
+  ["bg-orange-800"] = { BackgroundColor3 = Color3.fromHex("#9a3412") },
+  ["bg-orange-900"] = { BackgroundColor3 = Color3.fromHex("#7c2d12") },
+  ["bg-orange-950"] = { BackgroundColor3 = Color3.fromHex("#431407") },
 }
 
 return styleMappings
