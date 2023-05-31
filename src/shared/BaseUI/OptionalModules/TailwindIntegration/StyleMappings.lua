@@ -1,6 +1,14 @@
 local types = require(script.Parent.Types)
 
-local styleMappings: types.StyleMappings = {
+local configFolder = require(script.Parent.Parent.Parent.ConfigFolder) -- For typesafety and preventing renaming issues
+local customStyleMappings: types.StyleMappings
+
+if configFolder:FindFirstChild("TailwindIntegration") then
+  local tailwindIntegrationConfig = require(configFolder.TailwindIntegration)
+  customStyleMappings = tailwindIntegrationConfig.customStyleMappings
+end
+
+local defaultStyleMappings: types.StyleMappings = {
   -- BG
   ["bg-transparent"] = { BackgroundTransparency = 0 },
 
@@ -95,5 +103,15 @@ local styleMappings: types.StyleMappings = {
   ["bg-orange-900"] = { BackgroundColor3 = Color3.fromHex("#7c2d12") },
   ["bg-orange-950"] = { BackgroundColor3 = Color3.fromHex("#431407") },
 }
+
+local styleMappings: types.StyleMappings = {}
+
+for styleKey, styleProperties in customStyleMappings do
+  styleMappings[styleKey] = styleProperties
+end
+
+for styleKey, styleProperties in defaultStyleMappings do
+  styleMappings[styleKey] = styleProperties
+end
 
 return styleMappings
