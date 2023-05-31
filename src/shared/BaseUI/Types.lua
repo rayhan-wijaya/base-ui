@@ -1,10 +1,10 @@
 --!strict
 
-export type Children = {[number]: GuiObject}
+export type Children = {[number]: GuiBase}
 
 export type Ref = {
   refKey: string,
-  refs: {[string]: GuiObject},
+  refs: {[string]: GuiBase},
 }
 
 -- INFO: When adding a prop to `BaseUIProps`, please update `allBaseUIProps`

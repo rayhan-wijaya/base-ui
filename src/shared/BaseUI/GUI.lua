@@ -13,50 +13,50 @@ local gui = {
   screenGui = function (props: ScreenGui & types.BaseUIProps, children: types.Children): ScreenGui
     local newScreenGui = Instance.new("ScreenGui")
 
-    core.assignPropsToGuiObject(props, newScreenGui)
+    core.assignPropsToGuiBase(props, newScreenGui)
     core.assignChildrenToParent(children, newScreenGui)
-    core.assignGuiObjectToRef(newScreenGui, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiObject(props.Styles, newScreenGui) end
+    core.assignGuiBaseToRef(newScreenGui, props.Ref)
+    if applyStyles then applyStyles.applyStylesToGuiBase(props.Styles, newScreenGui) end
 
     return newScreenGui
   end,
   frame = function (props: Frame & types.BaseUIProps, children: types.Children): Frame
     local newFrame = Instance.new("Frame")
 
-    core.assignPropsToGuiObject(props, newFrame)
+    core.assignPropsToGuiBase(props, newFrame)
     core.assignChildrenToParent(children, newFrame)
-    core.assignGuiObjectToRef(newFrame, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiObject(props.Styles, newFrame) end
+    core.assignGuiBaseToRef(newFrame, props.Ref)
+    if applyStyles then applyStyles.applyStylesToGuiBase(props.Styles, newFrame) end
 
     return newFrame
   end,
   textButton = function (props: TextButton & types.BaseUIProps, children: {[number]: string}): TextButton
     local newTextButton = Instance.new("TextButton")
 
-    core.assignPropsToGuiObject(props, newTextButton)
+    core.assignPropsToGuiBase(props, newTextButton)
     newTextButton.Text = children[1];
-    core.assignGuiObjectToRef(newTextButton, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiObject(props.Styles, newTextButton) end
+    core.assignGuiBaseToRef(newTextButton, props.Ref)
+    if applyStyles then applyStyles.applyStylesToGuiBase(props.Styles, newTextButton) end
 
     return newTextButton
   end,
   textLabel = function (props: TextLabel & types.BaseUIProps, children: {[number]: string}): TextLabel
     local newTextLabel = Instance.new("TextLabel")
 
-    core.assignPropsToGuiObject(props, newTextLabel)
+    core.assignPropsToGuiBase(props, newTextLabel)
     newTextLabel.Text = children[1];
-    core.assignGuiObjectToRef(newTextLabel, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiObject(props.Styles, newTextLabel) end
+    core.assignGuiBaseToRef(newTextLabel, props.Ref)
+    if applyStyles then applyStyles.applyStylesToGuiBase(props.Styles, newTextLabel) end
 
     return newTextLabel
   end,
   imageLabel = function (props: ImageLabel & types.BaseUIProps, children: {[number]: string}): ImageLabel
     local newImageLabel = Instance.new("ImageLabel")
 
-    core.assignPropsToGuiObject(props, newImageLabel)
+    core.assignPropsToGuiBase(props, newImageLabel)
     newImageLabel.Image = children[1];
-    core.assignGuiObjectToRef(newImageLabel, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiObject(props.Styles, newImageLabel) end
+    core.assignGuiBaseToRef(newImageLabel, props.Ref)
+    if applyStyles then applyStyles.applyStylesToGuiBase(props.Styles, newImageLabel) end
 
     return newImageLabel
   end,

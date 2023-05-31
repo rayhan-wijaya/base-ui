@@ -1,4 +1,4 @@
-local styleMappings: {[string]: GuiObject} = {
+local styleMappings: {[string]: GuiBase} = {
   -- BG
   ["bg-transparent"] = { BackgroundTransparency = 0 },
 

@@ -2,33 +2,33 @@
 
 local types = require(script.Parent.Types)
 
-local assignPropsToGuiObject = function (props: {[string]: any}, guiObject: GuiObject)
+local assignPropsToGuiBase = function (props: {[string]: any}, GuiBase: GuiBase)
   for propKey, propValue in pairs(props) do
     if table.find(types.allBaseUIProps, propKey) ~= nil then
       continue
     end
 
-    guiObject[propKey] = propValue
+    GuiBase[propKey] = propValue
   end
 end
 
-local assignChildrenToParent = function (children: types.Children, parent: GuiObject)
+local assignChildrenToParent = function (children: types.Children, parent: GuiBase)
   for _, child in pairs(children) do
     child.Parent = parent
   end
 end
 
-local assignGuiObjectToRef = function (guiObject: GuiObject, ref: types.Ref)
+local assignGuiBaseToRef = function (GuiBase: GuiBase, ref: types.Ref)
   if not ref then
     return
   end
 
-  ref.refs[ref.refKey] = guiObject
+  ref.refs[ref.refKey] = GuiBase
 end
 
 return {
-  assignPropsToGuiObject = assignPropsToGuiObject,
+  assignPropsToGuiBase = assignPropsToGuiBase,
   assignChildrenToParent = assignChildrenToParent,
-  assignGuiObjectToRef = assignGuiObjectToRef,
+  assignGuiBaseToRef = assignGuiBaseToRef,
 }
 
