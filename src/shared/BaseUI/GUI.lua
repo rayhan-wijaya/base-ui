@@ -22,6 +22,15 @@ local gui = {
 
     return newFrame
   end,
+  textButton = function (props: TextButton & types.BaseUIProps, children: {[number]: string}): TextButton
+    local newTextButton = Instance.new("TextButton")
+
+    core.assignPropsToGuiObject(props, newTextButton)
+    newTextButton.Text = children[1];
+    core.assignGuiObjectToRef(newTextButton, props.Ref)
+
+    return newTextButton
+  end,
 }
 
 return gui
