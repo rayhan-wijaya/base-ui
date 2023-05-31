@@ -1,7 +1,6 @@
 local baseUI = game.ReplicatedStorage.Common.BaseUI
 local gui = require(baseUI.GUI)
 local utils = require(baseUI.Utils)
-local types = require(baseUI.Types)
 
 local player = game.Players.LocalPlayer
 local playerGui = player.PlayerGui
