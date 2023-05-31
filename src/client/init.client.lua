@@ -1,48 +1,42 @@
-local player = game.Players.LocalPlayer
-local playerGui = player.PlayerGui
-
 local baseUI = game.ReplicatedStorage.Common.BaseUI
 local gui = require(baseUI.GUI)
 
+local player = game.Players.LocalPlayer
+local playerGui = player.PlayerGui
+
 local frame = function ()
-  local refs  = {
-    firstButton = nil :: TextButton?,
-  }
+	local refs = {
+		textLabel = nil :: TextLabel?,
+	}
 
-  local frame = (
-    gui.frame({
-      Size = UDim2.new(1, 0, 1, 0),
-      Styles = "bg-red-900 bg-red-100",
-    }, {
-      gui.textButton({
-        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-        Ref = { refKey = "firstButton", refs = refs },
-      }, {
-        "0"
-      }),
-      gui.textButton({ BackgroundColor3 = Color3.fromRGB() }, {
-        "Second Button",
-      }),
-    })
-  )
+  local newFrame = (
+		gui.frame({ Styles = "bg-red-900 text-scaled" }, {
+			gui.textLabel({
+				Styles = "bg-red-300 text-scaled",
+				Ref = { refKey = "textLabel", refs = refs }
+			}, {
+				"Hello"
+			}),
+		})
+	)
 
-  local updateFirstButton = coroutine.create(function ()
-    while task.wait(0.5) do
-      local nextNumber = tonumber(refs.firstButton.Text) + 1
-      refs.firstButton.Text = tostring(nextNumber)
-    end
-  end)
+	local updateTextLabel = coroutine.create(function ()
+		while task.wait(1) do
+			if not refs.textLabel then
+				continue
+			end
 
-  coroutine.resume(updateFirstButton)
+			refs.textLabel.Text = refs.textLabel.Text .. " Test"
+		end
+	end)
 
-  return frame
+	coroutine.resume(updateTextLabel)
+
+	return newFrame
 end
 
-local screenGui = (
-  gui.screenGui({}, {
-    frame(),
-  })
-)
+local screenGui = gui.screenGui({}, {
+	frame()
+})
 
 screenGui.Parent = playerGui
-
