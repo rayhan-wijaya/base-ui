@@ -29,7 +29,6 @@ local styleMappings: {[string]: GuiBase} = {
   ["bg-gray-950"] = { BackgroundColor3 = Color3.fromHex("#030712") },
 
   -- BG Zinc
-
   ["bg-zinc-50"] = { BackgroundColor3 = Color3.fromHex("#fafafa") },
   ["bg-zinc-100"] = { BackgroundColor3 = Color3.fromHex("#f4f4f5") },
   ["bg-zinc-200"] = { BackgroundColor3 = Color3.fromHex("#e4e4e7") },
@@ -43,7 +42,6 @@ local styleMappings: {[string]: GuiBase} = {
   ["bg-zinc-950"] = { BackgroundColor3 = Color3.fromHex("#09090b") },
 
   -- BG Neutral
-
   ["bg-neutral-50"] = { BackgroundColor3 = Color3.fromHex("#fafafa") },
   ["bg-neutral-100"] = { BackgroundColor3 = Color3.fromHex("#f5f5f5") },
   ["bg-neutral-200"] = { BackgroundColor3 = Color3.fromHex("#e5e5e5") },
@@ -57,7 +55,6 @@ local styleMappings: {[string]: GuiBase} = {
   ["bg-neutral-950"] = { BackgroundColor3 = Color3.fromHex("#0a0a0a") },
 
   -- BG Stone
-
   ["bg-stone-50"] = { BackgroundColor3 = Color3.fromHex("#fafaf9") },
   ["bg-stone-100"] = { BackgroundColor3 = Color3.fromHex("#f5f5f4") },
   ["bg-stone-200"] = { BackgroundColor3 = Color3.fromHex("#e7e5e4") },
@@ -71,7 +68,6 @@ local styleMappings: {[string]: GuiBase} = {
   ["bg-stone-950"] = { BackgroundColor3 = Color3.fromHex("#0c0a09") },
 
   -- BG Red
-
   ["bg-red-50"] = { BackgroundColor3 = Color3.fromHex("#fef2f2") },
   ["bg-red-100"] = { BackgroundColor3 = Color3.fromHex("#fee2e2") },
   ["bg-red-200"] = { BackgroundColor3 = Color3.fromHex("#fecaca") },
@@ -85,7 +81,6 @@ local styleMappings: {[string]: GuiBase} = {
   ["bg-red-950"] = { BackgroundColor3 = Color3.fromHex("#450a0a") },
 
   -- BG Orange
-
   ["bg-orange-50"] = { BackgroundColor3 = Color3.fromHex("#fff7ed") },
   ["bg-orange-100"] = { BackgroundColor3 = Color3.fromHex("#ffedd5") },
   ["bg-orange-200"] = { BackgroundColor3 = Color3.fromHex("#fed7aa") },
