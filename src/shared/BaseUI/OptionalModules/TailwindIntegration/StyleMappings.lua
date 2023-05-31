@@ -41,6 +41,20 @@ local styleMappings: {[string]: GuiBase} = {
   ["bg-zinc-800"] = { BackgroundColor3 = Color3.fromHex("#27272a") },
   ["bg-zinc-900"] = { BackgroundColor3 = Color3.fromHex("#18181b") },
   ["bg-zinc-950"] = { BackgroundColor3 = Color3.fromHex("#09090b") },
+
+  -- BG Neutral
+
+  ["bg-neutral-50"] = { BackgroundColor3 = Color3.fromHex("#fafafa") },
+  ["bg-neutral-100"] = { BackgroundColor3 = Color3.fromHex("#f5f5f5") },
+  ["bg-neutral-200"] = { BackgroundColor3 = Color3.fromHex("#e5e5e5") },
+  ["bg-neutral-300"] = { BackgroundColor3 = Color3.fromHex("#d4d4d4") },
+  ["bg-neutral-400"] = { BackgroundColor3 = Color3.fromHex("#a3a3a3") },
+  ["bg-neutral-500"] = { BackgroundColor3 = Color3.fromHex("#737373") },
+  ["bg-neutral-600"] = { BackgroundColor3 = Color3.fromHex("#525252") },
+  ["bg-neutral-700"] = { BackgroundColor3 = Color3.fromHex("#404040") },
+  ["bg-neutral-800"] = { BackgroundColor3 = Color3.fromHex("#262626") },
+  ["bg-neutral-900"] = { BackgroundColor3 = Color3.fromHex("#171717") },
+  ["bg-neutral-950"] = { BackgroundColor3 = Color3.fromHex("#0a0a0a") },
 }
 
 return styleMappings
