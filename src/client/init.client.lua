@@ -1,5 +1,6 @@
 local baseUI = game.ReplicatedStorage.Common.BaseUI
 local gui = require(baseUI.GUI)
+local utils = require(baseUI.Utils)
 local types = require(baseUI.Types)
 
 local player = game.Players.LocalPlayer
@@ -10,14 +11,8 @@ local frame = function ()
     textLabel = nil :: TextLabel?,
   }
 
-  local createRef = function (refKey: string): types.Ref
-    return {
-      refs = refs,
-      refKey = refKey,
-    }
-  end
-
-  local textLabelRef: types.Ref = createRef("textLabelRef")
+  local createRef = utils.generateCreateRef(refs)
+  local textLabelRef = createRef("textLabelRef")
 
   local newFrame = (
     gui.frame({ Styles = "bg-red-900 text-scaled" }, {
