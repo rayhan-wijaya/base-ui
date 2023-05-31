@@ -1,4 +1,6 @@
-local styleMappings: {[string]: GuiBase} = {
+local types = require(script.Parent.Types)
+
+local styleMappings: types.StyleMappings = {
   -- BG
   ["bg-transparent"] = { BackgroundTransparency = 0 },
 
