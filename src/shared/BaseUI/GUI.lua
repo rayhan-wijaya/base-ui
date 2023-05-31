@@ -40,6 +40,15 @@ local gui = {
 
     return newTextLabel
   end,
+  imageLabel = function (props: ImageLabel & types.BaseUIProps, children: {[number]: string}): ImageLabel
+    local newImageLabel = Instance.new("ImageLabel")
+
+    core.assignPropsToGuiObject(props, newImageLabel)
+    newImageLabel.Image = children[1];
+    core.assignGuiObjectToRef(newImageLabel, props.Ref)
+
+    return newImageLabel
+  end,
 }
 
 return gui
