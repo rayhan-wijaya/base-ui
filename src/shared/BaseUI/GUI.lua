@@ -31,6 +31,15 @@ local gui = {
 
     return newTextButton
   end,
+  textLabel = function (props: TextLabel & types.BaseUIProps, children: {[number]: string}): TextLabel
+    local newTextLabel = Instance.new("TextLabel")
+
+    core.assignPropsToGuiObject(props, newTextLabel)
+    newTextLabel.Text = children[1];
+    core.assignGuiObjectToRef(newTextLabel, props.Ref)
+
+    return newTextLabel
+  end,
 }
 
 return gui
