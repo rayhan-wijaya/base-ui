@@ -12,7 +12,14 @@ local assignPropsToGuiObject = function (props: {[string]: any}, guiObject: GuiO
   end
 end
 
+local assignChildrenToParent = function (children: types.Children, parent: GuiObject)
+  for _, child in pairs(children) do
+    child.Parent = parent
+  end
+end
+
 return {
   assignPropsToGuiObject = assignPropsToGuiObject,
+  assignChildrenToParent = assignChildrenToParent,
 }
 
