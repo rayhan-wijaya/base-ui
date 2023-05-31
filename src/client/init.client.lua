@@ -12,7 +12,7 @@ local frame = function ()
   local frame = (
     gui.frame({
       Size = UDim2.new(1, 0, 1, 0),
-      BackgroundTransparency = 1,
+      Styles = "bg-red-900 bg-red-100",
     }, {
       gui.textButton({
         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
