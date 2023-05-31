@@ -18,6 +18,9 @@ if configFolder:FindFirstChild("TailwindIntegration") then
 end
 
 local defaultStyleMappings: types.StyleMappings = {
+  -- Text
+  ["text-scaled"] = { TextScaled = true },
+
   -- BG
   ["bg-transparent"] = { BackgroundTransparency = 0 },
 
