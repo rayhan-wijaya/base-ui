@@ -1,16 +1,16 @@
 local styleMappings = require(script.Parent.StyleMappings)
 
-local applyStylePropertiesToGuiBase = function (styleProperties: GuiBase, GuiBase: GuiBase)
+local applyStylePropertiesToGuiBase = function (styleProperties: GuiBase, guiBase: GuiBase)
   for propertyKey, propertyValue in pairs(styleProperties) do
     local isSuccessful = pcall(function ()
-      GuiBase[propertyKey] = propertyValue
+      guiBase[propertyKey] = propertyValue
     end)
 
     if not isSuccessful then
       local warning = string.format(
         "Failed to assign %s to %s",
         propertyKey,
-        GuiBase.ClassName
+        guiBase.ClassName
       )
 
       warn(warning)
@@ -18,7 +18,7 @@ local applyStylePropertiesToGuiBase = function (styleProperties: GuiBase, GuiBas
   end
 end
 
-local applyStylesToGuiBase = function (stylesString: string, GuiBase: GuiBase)
+local applyStylesToGuiBase = function (stylesString: string, guiBase: GuiBase)
   if stylesString == "" or stylesString == nil then
     return
   end
@@ -32,7 +32,7 @@ local applyStylesToGuiBase = function (stylesString: string, GuiBase: GuiBase)
       local warning = string.format(
         "%s doesn't exist as a style at %s",
         style,
-        GuiBase.ClassName
+        guiBase.ClassName
       )
 
       warn(warning)
@@ -41,7 +41,7 @@ local applyStylesToGuiBase = function (stylesString: string, GuiBase: GuiBase)
     end
 
     local styleProperties = styleMappings[style]
-    applyStylePropertiesToGuiBase(styleProperties, GuiBase)
+    applyStylePropertiesToGuiBase(styleProperties, guiBase)
   end
 end
 
