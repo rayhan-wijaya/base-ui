@@ -1,0 +1,1 @@
+return game.ReplicatedStorage.Common.BaseUIConfig
