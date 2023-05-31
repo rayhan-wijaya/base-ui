@@ -11,10 +11,12 @@ export type Ref = {
 
 export type BaseUIProps = {
   Ref: Ref,
+  Styles: string,
 }
 
 local allBaseUIProps = {
   "Ref",
+  "Styles",
 }
 
 return {
