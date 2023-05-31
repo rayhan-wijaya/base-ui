@@ -18,8 +18,17 @@ local assignChildrenToParent = function (children: types.Children, parent: GuiOb
   end
 end
 
+local assignGuiObjectToRef = function (guiObject: GuiObject, ref: types.Ref)
+  if not ref then
+    return
+  end
+
+  ref.refs[ref.refKey] = guiObject
+end
+
 return {
   assignPropsToGuiObject = assignPropsToGuiObject,
   assignChildrenToParent = assignChildrenToParent,
+  assignGuiObjectToRef = assignGuiObjectToRef,
 }
 
