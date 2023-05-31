@@ -1,3 +1,12 @@
+-- Some not commonly-used styles are disabled by default
+-- to minimize bundle size unless this module figures out
+-- some purging solution
+
+-- If you want to include them, simply uncomment
+
+-- You can also comment out the styles you don't need
+-- [And add custom ones if you like :)]
+
 local types = require(script.Parent.Types)
 
 local configFolder = require(script.Parent.Parent.Parent.ConfigFolder) -- For typesafety and preventing renaming issues
