@@ -28,18 +28,18 @@ local styleMappings: {[string]: GuiBase} = {
   ["bg-gray-900"] = { BackgroundColor3 = Color3.fromHex("#111827") },
   ["bg-gray-950"] = { BackgroundColor3 = Color3.fromHex("#030712") },
 
-  -- BG Zinc
-  ["bg-zinc-50"] = { BackgroundColor3 = Color3.fromHex("#fafafa") },
-  ["bg-zinc-100"] = { BackgroundColor3 = Color3.fromHex("#f4f4f5") },
-  ["bg-zinc-200"] = { BackgroundColor3 = Color3.fromHex("#e4e4e7") },
-  ["bg-zinc-300"] = { BackgroundColor3 = Color3.fromHex("#d4d4d8") },
-  ["bg-zinc-400"] = { BackgroundColor3 = Color3.fromHex("#a1a1aa") },
-  ["bg-zinc-500"] = { BackgroundColor3 = Color3.fromHex("#71717a") },
-  ["bg-zinc-600"] = { BackgroundColor3 = Color3.fromHex("#52525b") },
-  ["bg-zinc-700"] = { BackgroundColor3 = Color3.fromHex("#3f3f46") },
-  ["bg-zinc-800"] = { BackgroundColor3 = Color3.fromHex("#27272a") },
-  ["bg-zinc-900"] = { BackgroundColor3 = Color3.fromHex("#18181b") },
-  ["bg-zinc-950"] = { BackgroundColor3 = Color3.fromHex("#09090b") },
+  -- -- BG Zinc
+  -- ["bg-zinc-50"] = { BackgroundColor3 = Color3.fromHex("#fafafa") },
+  -- ["bg-zinc-100"] = { BackgroundColor3 = Color3.fromHex("#f4f4f5") },
+  -- ["bg-zinc-200"] = { BackgroundColor3 = Color3.fromHex("#e4e4e7") },
+  -- ["bg-zinc-300"] = { BackgroundColor3 = Color3.fromHex("#d4d4d8") },
+  -- ["bg-zinc-400"] = { BackgroundColor3 = Color3.fromHex("#a1a1aa") },
+  -- ["bg-zinc-500"] = { BackgroundColor3 = Color3.fromHex("#71717a") },
+  -- ["bg-zinc-600"] = { BackgroundColor3 = Color3.fromHex("#52525b") },
+  -- ["bg-zinc-700"] = { BackgroundColor3 = Color3.fromHex("#3f3f46") },
+  -- ["bg-zinc-800"] = { BackgroundColor3 = Color3.fromHex("#27272a") },
+  -- ["bg-zinc-900"] = { BackgroundColor3 = Color3.fromHex("#18181b") },
+  -- ["bg-zinc-950"] = { BackgroundColor3 = Color3.fromHex("#09090b") },
 
   -- BG Neutral
   ["bg-neutral-50"] = { BackgroundColor3 = Color3.fromHex("#fafafa") },
@@ -54,18 +54,18 @@ local styleMappings: {[string]: GuiBase} = {
   ["bg-neutral-900"] = { BackgroundColor3 = Color3.fromHex("#171717") },
   ["bg-neutral-950"] = { BackgroundColor3 = Color3.fromHex("#0a0a0a") },
 
-  -- BG Stone
-  ["bg-stone-50"] = { BackgroundColor3 = Color3.fromHex("#fafaf9") },
-  ["bg-stone-100"] = { BackgroundColor3 = Color3.fromHex("#f5f5f4") },
-  ["bg-stone-200"] = { BackgroundColor3 = Color3.fromHex("#e7e5e4") },
-  ["bg-stone-300"] = { BackgroundColor3 = Color3.fromHex("#d6d3d1") },
-  ["bg-stone-400"] = { BackgroundColor3 = Color3.fromHex("#a8a29e") },
-  ["bg-stone-500"] = { BackgroundColor3 = Color3.fromHex("#78716c") },
-  ["bg-stone-600"] = { BackgroundColor3 = Color3.fromHex("#57534e") },
-  ["bg-stone-700"] = { BackgroundColor3 = Color3.fromHex("#44403c") },
-  ["bg-stone-800"] = { BackgroundColor3 = Color3.fromHex("#292524") },
-  ["bg-stone-900"] = { BackgroundColor3 = Color3.fromHex("#1c1917") },
-  ["bg-stone-950"] = { BackgroundColor3 = Color3.fromHex("#0c0a09") },
+  -- -- BG Stone
+  -- ["bg-stone-50"] = { BackgroundColor3 = Color3.fromHex("#fafaf9") },
+  -- ["bg-stone-100"] = { BackgroundColor3 = Color3.fromHex("#f5f5f4") },
+  -- ["bg-stone-200"] = { BackgroundColor3 = Color3.fromHex("#e7e5e4") },
+  -- ["bg-stone-300"] = { BackgroundColor3 = Color3.fromHex("#d6d3d1") },
+  -- ["bg-stone-400"] = { BackgroundColor3 = Color3.fromHex("#a8a29e") },
+  -- ["bg-stone-500"] = { BackgroundColor3 = Color3.fromHex("#78716c") },
+  -- ["bg-stone-600"] = { BackgroundColor3 = Color3.fromHex("#57534e") },
+  -- ["bg-stone-700"] = { BackgroundColor3 = Color3.fromHex("#44403c") },
+  -- ["bg-stone-800"] = { BackgroundColor3 = Color3.fromHex("#292524") },
+  -- ["bg-stone-900"] = { BackgroundColor3 = Color3.fromHex("#1c1917") },
+  -- ["bg-stone-950"] = { BackgroundColor3 = Color3.fromHex("#0c0a09") },
 
   -- BG Red
   ["bg-red-50"] = { BackgroundColor3 = Color3.fromHex("#fef2f2") },
