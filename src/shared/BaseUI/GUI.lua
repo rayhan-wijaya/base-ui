@@ -3,8 +3,8 @@
 local core = require(script.Parent.Core)
 local applyStyles = nil
 
-if script.Parent.OptionalModules:FindFirstChild("Styles") then
-  applyStyles = require(script.Parent.OptionalModules.TailwindStyles.ApplyStyles)
+if script.Parent.OptionalModules:FindFirstChild("TailwindIntegration") then
+  applyStyles = require(script.Parent.OptionalModules.TailwindIntegration.ApplyStyles)
 end
 
 local types = require(script.Parent.Types)
