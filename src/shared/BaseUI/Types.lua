@@ -2,4 +2,21 @@
 
 export type Children = {[number]: GuiObject}
 
-return nil
+export type Ref = {
+  refKey: string,
+  refs: {[string]: GuiObject},
+}
+
+-- INFO: When adding a prop to `BaseUIProps`, please update `allBaseUIProps`
+
+export type BaseUIProps = {
+  Ref: Ref,
+}
+
+local allBaseUIProps = {
+  "Ref",
+}
+
+return {
+  allBaseUIProps = allBaseUIProps,
+}
