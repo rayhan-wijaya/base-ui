@@ -1,4 +1,5 @@
-type StyleMappings = {[string]: GuiBase}
+type GuiItem = GuiObject | LayerCollector
+type StyleMappings = {[string]: GuiItem}
 
 local customStyleMappings: StyleMappings = {
   -- Custom style mappings!!

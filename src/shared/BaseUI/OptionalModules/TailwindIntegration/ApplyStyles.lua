@@ -1,6 +1,7 @@
 local styleMappings = require(script.Parent.StyleMappings)
+local types = require(script.Parent.Parent.Parent.Types)
 
-local applyStylePropertiesToGuiItem = function (styleProperties: GuiBase, guiItem: GuiBase)
+local applyStylePropertiesToGuiItem = function (styleProperties: types.GuiItem, guiItem: types.GuiItem)
   for propertyKey, propertyValue in pairs(styleProperties) do
     local isSuccessful = pcall(function ()
       guiItem[propertyKey] = propertyValue
@@ -18,7 +19,7 @@ local applyStylePropertiesToGuiItem = function (styleProperties: GuiBase, guiIte
   end
 end
 
-local applyStylesToGuiItem = function (stylesString: string, guiItem: guiItem)
+local applyStylesToGuiItem = function (stylesString: string, guiItem: types.GuiItem)
   if stylesString == "" or stylesString == nil then
     return
   end

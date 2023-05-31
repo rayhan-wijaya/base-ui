@@ -1,10 +1,12 @@
 --!strict
 
-export type Children = {[number]: GuiBase}
+export type GuiItem = GuiObject | LayerCollector
+
+export type Children = {[number]: GuiItem}
 
 export type Ref = {
   refKey: string,
-  refs: {[string]: GuiBase},
+  refs: {[string]: GuiItem},
 }
 
 -- INFO: When adding a prop to `BaseUIProps`, please update `allBaseUIProps`
