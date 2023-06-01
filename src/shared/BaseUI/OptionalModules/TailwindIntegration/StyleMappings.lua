@@ -8,6 +8,7 @@
 -- [And add custom ones if you like :)]
 
 local types = require(script.Parent.Types)
+local baseUiTypes = require(script.Parent.Parent.Parent.Types)
 
 local configFolder = require(script.Parent.Parent.Parent.ConfigFolder) -- For typesafety and preventing renaming issues
 local customStyleMappings: types.StyleMappings
@@ -18,6 +19,13 @@ if configFolder:FindFirstChild("TailwindIntegration") then
 end
 
 local defaultStyleMappings: types.StyleMappings = {
+  -- Size
+  ["width-full"] = {
+    Size = function (guiItem: baseUiTypes.GuiItem)
+      return UDim2.new(1, guiItem.Size.X.Offset, guiItem.Size.Y.Scale, guiItem.Size.Y.Offset)
+    end
+  },
+
   -- Text
   ["text-scaled"] = { TextScaled = true },
 
