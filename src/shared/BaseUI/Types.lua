@@ -2,7 +2,7 @@
 
 export type GuiItem = GuiObject | LayerCollector
 
-export type Children = {[number]: GuiItem}
+export type Children = {GuiItem} | {string}
 
 export type Ref = {
   refKey: string,
