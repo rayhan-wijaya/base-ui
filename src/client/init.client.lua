@@ -46,4 +46,5 @@ while task.wait(1) do
   end
 
   frameRefs.textLabel.Text = frameRefs.textLabel.Text .. " Test"
+  frameRefs.frame.BackgroundTransparency = frameRefs.frame.BackgroundTransparency + 0.1
 end
