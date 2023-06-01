@@ -1,13 +1,8 @@
 --!strict
 
 local core = require(script.Parent.Core)
-local applyStyles = nil
-
-if script.Parent.OptionalModules:FindFirstChild("TailwindIntegration") then
-  applyStyles = require(script.Parent.OptionalModules.TailwindIntegration.ApplyStyles)
-end
-
 local types = require(script.Parent.Types)
+local initHooks = require(script.Parent.GUIInitHooks).initHooks
 
 local gui = {
   screenGui = function (props: ScreenGui & types.BaseUIProps, children: types.Children): ScreenGui
@@ -16,7 +11,7 @@ local gui = {
     core.assignPropsToGuiItem(props, newScreenGui)
     core.assignChildrenToParent(children, newScreenGui)
     core.assignGuiItemToRef(newScreenGui, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiItem(props.TStyles, newScreenGui) end
+    core.runInitHooksOnGuiItem(initHooks, newScreenGui, { props = props })
 
     return newScreenGui
   end,
@@ -26,7 +21,7 @@ local gui = {
     core.assignPropsToGuiItem(props, newFrame)
     core.assignChildrenToParent(children, newFrame)
     core.assignGuiItemToRef(newFrame, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiItem(props.TStyles, newFrame) end
+    core.runInitHooksOnGuiItem(initHooks, newFrame, { props = props })
 
     return newFrame
   end,
@@ -36,7 +31,7 @@ local gui = {
     core.assignPropsToGuiItem(props, newTextButton)
     core.assignChildrenToParent(children, newTextButton, { textNodeGuiItemProperty = "Text" })
     core.assignGuiItemToRef(newTextButton, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiItem(props.TStyles, newTextButton) end
+    core.runInitHooksOnGuiItem(initHooks, newTextButton, { props = props })
 
     return newTextButton
   end,
@@ -46,7 +41,7 @@ local gui = {
     core.assignPropsToGuiItem(props, newTextLabel)
     core.assignChildrenToParent(children, newTextLabel, { textNodeGuiItemProperty = "Text" })
     core.assignGuiItemToRef(newTextLabel, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiItem(props.TStyles, newTextLabel) end
+    core.runInitHooksOnGuiItem(initHooks, newTextLabel, { props = props })
 
     return newTextLabel
   end,
@@ -56,7 +51,7 @@ local gui = {
     core.assignPropsToGuiItem(props, newImageLabel)
     core.assignChildrenToParent(children, newImageLabel, { textNodeGuiItemProperty = "Image" })
     core.assignGuiItemToRef(newImageLabel, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiItem(props.TStyles, newImageLabel) end
+    core.runInitHooksOnGuiItem(initHooks, newImageLabel, { props = props })
 
     return newImageLabel
   end,
