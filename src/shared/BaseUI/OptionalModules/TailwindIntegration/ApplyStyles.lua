@@ -1,10 +1,20 @@
-local styleMappings = require(script.Parent.StyleMappings)
-local types = require(script.Parent.Parent.Parent.Types)
+--!strict
 
-local applyStylePropertiesToGuiItem = function (styleProperties: types.GuiItem, guiItem: types.GuiItem)
+local styleMappings = require(script.Parent.StyleMappings)
+
+local baseUiTypes = require(script.Parent.Parent.Parent.Types)
+local types = require(script.Parent.Types)
+
+local applyStylePropertiesToGuiItem = function (styleProperties: types.StyleProperties, guiItem: baseUiTypes.GuiItem)
   for propertyKey, propertyValue in pairs(styleProperties) do
+    local finalPropertyValue = propertyValue
+
+    if typeof(propertyValue) == "function" then
+      finalPropertyValue = propertyValue(guiItem)
+    end
+
     local isSuccessful = pcall(function ()
-      guiItem[propertyKey] = propertyValue
+      guiItem[propertyKey] = finalPropertyValue
     end)
 
     if not isSuccessful then
