@@ -34,7 +34,7 @@ local gui = {
     local newTextButton = Instance.new("TextButton")
 
     core.assignPropsToGuiItem(props, newTextButton)
-    newTextButton.Text = children[1];
+    core.assignChildrenToParent(children, newTextButton, { textNodeGuiItemProperty = "Text" })
     core.assignGuiItemToRef(newTextButton, props.Ref)
     if applyStyles then applyStyles.applyStylesToGuiItem(props.Styles, newTextButton) end
 
@@ -44,7 +44,7 @@ local gui = {
     local newTextLabel = Instance.new("TextLabel")
 
     core.assignPropsToGuiItem(props, newTextLabel)
-    newTextLabel.Text = children[1];
+    core.assignChildrenToParent(children, newTextLabel, { textNodeGuiItemProperty = "Text" })
     core.assignGuiItemToRef(newTextLabel, props.Ref)
     if applyStyles then applyStyles.applyStylesToGuiItem(props.Styles, newTextLabel) end
 
@@ -54,7 +54,7 @@ local gui = {
     local newImageLabel = Instance.new("ImageLabel")
 
     core.assignPropsToGuiItem(props, newImageLabel)
-    newImageLabel.Image = children[1];
+    core.assignChildrenToParent(children, newImageLabel, { textNodeGuiItemProperty = "Image" })
     core.assignGuiItemToRef(newImageLabel, props.Ref)
     if applyStyles then applyStyles.applyStylesToGuiItem(props.Styles, newImageLabel) end
 
