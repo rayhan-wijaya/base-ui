@@ -77,7 +77,7 @@ local defaultStyleMappings: types.StyleMappings = {
   ["text-scaled"] = { TextScaled = true },
 
   -- BG
-  ["bg-transparent"] = { BackgroundTransparency = 0 },
+  ["bg-transparent"] = { BackgroundTransparency = 1 },
 
   -- BG Slate
   ["bg-slate-50"] = { BackgroundColor3 = Color3.fromHex("#f8fafc") },
