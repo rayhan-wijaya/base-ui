@@ -15,14 +15,16 @@ end)
 
 local frameRefs = {
   textLabel = nil :: TextLabel?,
+  frame = nil :: Frame?,
 }
 
 local frame = function ()
   local createRef = utils.generateCreateRef(frameRefs)
   local textLabelRef = createRef("textLabel")
+  local frameRef = createRef("frame")
 
   local newFrame = (
-    gui.frame({ TStyles = "bg-transparent w-full h-full" }, {
+    gui.frame({ TStyles = "bg-red-900 w-full h-full", Ref = frameRef }, {
       gui.textLabel({ TStyles = "bg-red-300 text-scaled h-1/2 w-1/2", Ref = textLabelRef }, {
         "Hello"
       }),
