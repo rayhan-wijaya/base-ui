@@ -14,7 +14,7 @@ local frame = function ()
   local textLabelRef = createRef("textLabel")
 
   local newFrame = (
-    gui.frame({ Styles = "bg-red-900 text-scaled" }, {
+    gui.frame({ Styles = "bg-red-900 width-full" }, {
       gui.textLabel({ Styles = "bg-red-300 text-scaled", Ref = textLabelRef }, {
         "Hello"
       }),
