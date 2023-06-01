@@ -3,7 +3,7 @@ local gui = require(baseUI.GUI)
 local utils = require(baseUI.Utils)
 
 local tailwindIntegration = baseUI.OptionalModules.TailwindIntegration
-local initTailwindIntegration = require(tailwindIntegration.InitTailwindIntegration)()
+require(tailwindIntegration.InitTailwindIntegration)()
 
 local player = game.Players.LocalPlayer
 local playerGui = player.PlayerGui
