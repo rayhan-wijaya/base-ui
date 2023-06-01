@@ -35,9 +35,20 @@ local assignGuiItemToRef = function (guiItem: types.GuiItem, ref: types.Ref)
   ref.refs[ref.refKey] = guiItem
 end
 
+local runInitHooksOnGuiItem = function (
+  initHooks: {types.InitHook},
+  guiItem: types.GuiItem,
+  options: { props: types.GuiItem & types.BaseUIProps }
+)
+  for _, initHook in ipairs(initHooks) do
+    initHook(guiItem, options.props)
+  end
+end
+
 return {
   assignPropsToGuiItem = assignPropsToGuiItem,
   assignChildrenToParent = assignChildrenToParent,
   assignGuiItemToRef = assignGuiItemToRef,
+  runInitHooksOnGuiItem = runInitHooksOnGuiItem,
 }
 
