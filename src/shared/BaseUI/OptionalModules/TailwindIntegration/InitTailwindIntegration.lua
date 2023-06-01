@@ -7,8 +7,6 @@ local registerInitHook = guiInitHooksModule.registerInitHook
 local init = function ()
   registerInitHook(function (guiItem, props)
     applyStylesToGuiItem(props.TStyles, guiItem)
-
-    print("Applied styles!")
   end)
 end
 
