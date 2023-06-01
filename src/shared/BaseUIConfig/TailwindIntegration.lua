@@ -1,7 +1,7 @@
-type GuiItem = GuiObject | LayerCollector
-type StyleMappings = {[string]: GuiItem}
+local baseUi = game.ReplicatedStorage.Common.BaseUI
+local tailwindIntegrationTypes = require(baseUi.OptionalModules.TailwindIntegration.Types)
 
-local customStyleMappings: StyleMappings = {
+local customStyleMappings: tailwindIntegrationTypes.StyleMappings = {
   -- Custom style mappings!!
   -- e.g.
   -- ["bg-transparent"] = { BackgroundTransparency = 0 },
