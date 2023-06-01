@@ -5,33 +5,21 @@ local utils = require(baseUI.Utils)
 local player = game.Players.LocalPlayer
 local playerGui = player.PlayerGui
 
-local frame = function ()
-  local refs = {
-    textLabel = nil :: TextLabel?,
-  }
+local frameRefs = {
+  textLabel = nil :: TextLabel?,
+}
 
-  local createRef = utils.generateCreateRef(refs)
+local frame = function ()
+  local createRef = utils.generateCreateRef(frameRefs)
   local textLabelRef = createRef("textLabel")
 
   local newFrame = (
-    gui.frame({ Styles = "bg-red-900 width-full" }, {
-      gui.textLabel({ Styles = "bg-red-300 text-scaled", Ref = textLabelRef }, {
+    gui.frame({ Styles = "bg-red-900 w-full h-full" }, {
+      gui.textLabel({ Styles = "bg-red-300 text-scaled h-1/2 w-1/2", Ref = textLabelRef }, {
         "Hello"
       }),
     })
   )
-
-  local updateTextLabel = coroutine.create(function ()
-    while task.wait(1) do
-      if not refs.textLabel then
-        continue
-      end
-
-      refs.textLabel.Text = refs.textLabel.Text .. " Test"
-    end
-  end)
-
-  coroutine.resume(updateTextLabel)
 
   return newFrame
 end
@@ -41,3 +29,11 @@ local screenGui = gui.screenGui({}, {
 })
 
 screenGui.Parent = playerGui
+
+while task.wait(1) do
+  if not frameRefs.textLabel then
+    continue
+  end
+
+  frameRefs.textLabel.Text = frameRefs.textLabel.Text .. " Test"
+end
