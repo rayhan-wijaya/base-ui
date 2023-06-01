@@ -1,12 +1,17 @@
 local baseUI = game.ReplicatedStorage.Common.BaseUI
 local gui = require(baseUI.GUI)
 local utils = require(baseUI.Utils)
+local guiInitHooks = require(baseUI.GUIInitHooks)
 
 local tailwindIntegration = baseUI.OptionalModules.TailwindIntegration
 require(tailwindIntegration.InitTailwindIntegration)()
 
 local player = game.Players.LocalPlayer
 local playerGui = player.PlayerGui
+
+guiInitHooks.registerInitHook(function (guiItem, props)
+  print("A new GUI primitive has been initialized! It's called " .. guiItem.Name)
+end)
 
 local frameRefs = {
   textLabel = nil :: TextLabel?,
