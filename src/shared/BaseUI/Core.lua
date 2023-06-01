@@ -12,7 +12,16 @@ local assignPropsToGuiItem = function (props: {[string]: any}, guiItem: types.Gu
   end
 end
 
-local assignChildrenToParent = function (children: types.Children, parent: types.GuiItem)
+local assignChildrenToParent = function (
+  children: types.Children,
+  parent: types.GuiItem,
+  textNodeOptions: { textNodeGuiItemProperty: string }?
+)
+  if textNodeOptions ~= nil and textNodeOptions["textNodeGuiItemProperty"] ~= nil then
+    parent[textNodeOptions.textNodeGuiItemProperty] = children[1]
+    return
+  end
+
   for _, child in pairs(children) do
     child.Parent = parent
   end
