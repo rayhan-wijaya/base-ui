@@ -19,15 +19,57 @@ if configFolder:FindFirstChild("TailwindIntegration") then
 end
 
 local defaultStyleMappings: types.StyleMappings = {
-  -- Size
+  -- Width Size
   ["w-full"] = {
     Size = function (guiItem: baseUiTypes.GuiItem)
       return UDim2.new(1, guiItem.Size.X.Offset, guiItem.Size.Y.Scale, guiItem.Size.Y.Offset)
     end
   },
+  ["w-1/2"] = {
+    Size = function (guiItem: baseUiTypes.GuiItem)
+      return UDim2.new(1/2, guiItem.Size.X.Offset, guiItem.Size.Y.Scale, guiItem.Size.Y.Offset)
+    end
+  },
+  ["w-1/3"] = {
+    Size = function (guiItem: baseUiTypes.GuiItem)
+      return UDim2.new(1/3, guiItem.Size.X.Offset, guiItem.Size.Y.Scale, guiItem.Size.Y.Offset)
+    end
+  },
+  ["w-1/4"] = {
+    Size = function (guiItem: baseUiTypes.GuiItem)
+      return UDim2.new(1/4, guiItem.Size.X.Offset, guiItem.Size.Y.Scale, guiItem.Size.Y.Offset)
+    end
+  },
+  ["w-1/5"] = {
+    Size = function (guiItem: baseUiTypes.GuiItem)
+      return UDim2.new(1/5, guiItem.Size.X.Offset, guiItem.Size.Y.Scale, guiItem.Size.Y.Offset)
+    end
+  },
+
+  -- Height Size
   ["h-full"] = {
     Size = function (guiItem: baseUiTypes.GuiItem)
       return UDim2.new(guiItem.Size.X.Scale, guiItem.Size.X.Offset, 1, guiItem.Size.Y.Offset)
+    end
+  },
+  ["h-1/2"] = {
+    Size = function (guiItem: baseUiTypes.GuiItem)
+      return UDim2.new(guiItem.Size.X.Scale, guiItem.Size.X.Offset, 1/2, guiItem.Size.Y.Offset)
+    end
+  },
+  ["h-1/3"] = {
+    Size = function (guiItem: baseUiTypes.GuiItem)
+      return UDim2.new(guiItem.Size.X.Scale, guiItem.Size.X.Offset, 1/3, guiItem.Size.Y.Offset)
+    end
+  },
+  ["h-1/4"] = {
+    Size = function (guiItem: baseUiTypes.GuiItem)
+      return UDim2.new(guiItem.Size.X.Scale, guiItem.Size.X.Offset, 1/4, guiItem.Size.Y.Offset)
+    end
+  },
+  ["h-1/5"] = {
+    Size = function (guiItem: baseUiTypes.GuiItem)
+      return UDim2.new(guiItem.Size.X.Scale, guiItem.Size.X.Offset, 1/5, guiItem.Size.Y.Offset)
     end
   },
 
