@@ -2,6 +2,9 @@ local baseUI = game.ReplicatedStorage.Common.BaseUI
 local gui = require(baseUI.GUI)
 local utils = require(baseUI.Utils)
 
+local tailwindIntegration = baseUI.OptionalModules.TailwindIntegration
+local initTailwindIntegration = require(tailwindIntegration.Init)()
+
 local player = game.Players.LocalPlayer
 local playerGui = player.PlayerGui
 
