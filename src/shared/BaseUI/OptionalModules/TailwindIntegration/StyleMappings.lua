@@ -25,6 +25,11 @@ local defaultStyleMappings: types.StyleMappings = {
       return UDim2.new(1, guiItem.Size.X.Offset, guiItem.Size.Y.Scale, guiItem.Size.Y.Offset)
     end
   },
+  ["height-full"] = {
+    Size = function (guiItem: baseUiTypes.GuiItem)
+      return UDim2.new(guiItem.Size.X.Scale, guiItem.Size.X.Offset, 1, guiItem.Size.Y.Offset)
+    end
+  },
 
   -- Text
   ["text-scaled"] = { TextScaled = true },
