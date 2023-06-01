@@ -29,7 +29,7 @@ local applyStylePropertiesToGuiItem = function (styleProperties: types.StyleProp
   end
 end
 
-local applyStylesToGuiItem = function (stylesString: string, guiItem: types.GuiItem)
+local applyStylesToGuiItem = function (stylesString: string, guiItem: baseUiTypes.GuiItem)
   if stylesString == "" or stylesString == nil then
     return
   end
