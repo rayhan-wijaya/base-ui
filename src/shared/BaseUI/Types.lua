@@ -13,12 +13,12 @@ export type Ref = {
 
 export type BaseUIProps = {
   Ref: Ref,
-  Styles: string,
+  TStyles: string,
 }
 
 local allBaseUIProps = {
   "Ref",
-  "Styles",
+  "TStyles",
 }
 
 return {

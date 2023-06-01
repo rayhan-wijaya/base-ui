@@ -16,7 +16,7 @@ local gui = {
     core.assignPropsToGuiItem(props, newScreenGui)
     core.assignChildrenToParent(children, newScreenGui)
     core.assignGuiItemToRef(newScreenGui, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiItem(props.Styles, newScreenGui) end
+    if applyStyles then applyStyles.applyStylesToGuiItem(props.TStyles, newScreenGui) end
 
     return newScreenGui
   end,
@@ -26,7 +26,7 @@ local gui = {
     core.assignPropsToGuiItem(props, newFrame)
     core.assignChildrenToParent(children, newFrame)
     core.assignGuiItemToRef(newFrame, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiItem(props.Styles, newFrame) end
+    if applyStyles then applyStyles.applyStylesToGuiItem(props.TStyles, newFrame) end
 
     return newFrame
   end,
@@ -36,7 +36,7 @@ local gui = {
     core.assignPropsToGuiItem(props, newTextButton)
     core.assignChildrenToParent(children, newTextButton, { textNodeGuiItemProperty = "Text" })
     core.assignGuiItemToRef(newTextButton, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiItem(props.Styles, newTextButton) end
+    if applyStyles then applyStyles.applyStylesToGuiItem(props.TStyles, newTextButton) end
 
     return newTextButton
   end,
@@ -46,7 +46,7 @@ local gui = {
     core.assignPropsToGuiItem(props, newTextLabel)
     core.assignChildrenToParent(children, newTextLabel, { textNodeGuiItemProperty = "Text" })
     core.assignGuiItemToRef(newTextLabel, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiItem(props.Styles, newTextLabel) end
+    if applyStyles then applyStyles.applyStylesToGuiItem(props.TStyles, newTextLabel) end
 
     return newTextLabel
   end,
@@ -56,7 +56,7 @@ local gui = {
     core.assignPropsToGuiItem(props, newImageLabel)
     core.assignChildrenToParent(children, newImageLabel, { textNodeGuiItemProperty = "Image" })
     core.assignGuiItemToRef(newImageLabel, props.Ref)
-    if applyStyles then applyStyles.applyStylesToGuiItem(props.Styles, newImageLabel) end
+    if applyStyles then applyStyles.applyStylesToGuiItem(props.TStyles, newImageLabel) end
 
     return newImageLabel
   end,
