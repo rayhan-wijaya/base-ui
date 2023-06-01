@@ -11,7 +11,7 @@ local frame = function ()
   }
 
   local createRef = utils.generateCreateRef(refs)
-  local textLabelRef = createRef("textLabelRef")
+  local textLabelRef = createRef("textLabel")
 
   local newFrame = (
     gui.frame({ Styles = "bg-red-900 text-scaled" }, {
