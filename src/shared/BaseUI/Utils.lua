@@ -9,6 +9,17 @@ local generateCreateRef = function (refs: {[number]: types.GuiItem}): (refKey: s
   end
 end
 
+local map = function<T, R>(items: {T}, mapper: (T) -> R): {R}
+  local newItems = {}
+
+  for _, item in ipairs(items) do
+    table.insert(newItems, mapper(item))
+  end
+
+  return newItems
+end
+
 return {
   generateCreateRef = generateCreateRef,
+  map = map,
 }
