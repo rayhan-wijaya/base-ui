@@ -4,12 +4,12 @@
 
 export type BaseUIProps = {
   Ref: Ref,
-  TStyles: string,
+  Styles: string,
 }
 
 local allBaseUIProps = {
   "Ref",
-  "TStyles",
+  "Styles",
 }
 
 export type GuiItem = GuiObject | LayerCollector
