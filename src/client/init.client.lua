@@ -15,8 +15,8 @@ local inventory = {
 
 local inventoryItem = function (props: { itemName: string })
   return (
-    gui.frame({ TStyles = "w-1/2 h-1/2 bg-red-300", Name = "InventoryItem" }, {
-      gui.textLabel({ TStyles = "text-scaled", Name = "InventoryItemName" }, {
+    gui.frame({ Styles = "w-1/2 h-1/2 bg-red-300", Name = "InventoryItem" }, {
+      gui.textLabel({ Styles = "text-scaled", Name = "InventoryItemName" }, {
         props.itemName,
       })
     })
@@ -35,7 +35,7 @@ local inventoryFrame = function ()
   end
 
   return (
-    gui.frame({ TStyles = "w-1/2 h-1/5 bg-red-800", Name = "InventoryFrame" }, (
+    gui.frame({ Styles = "w-1/2 h-1/5 bg-red-800", Name = "InventoryFrame" }, (
       inventoryItems()
     ))
   )
