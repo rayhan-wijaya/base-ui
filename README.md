@@ -1,5 +1,8 @@
 # base-ui
 
+**Notice**: BaseUI is still in heavy development. A version of it will be released
+when it's ready. Likely 0.1
+
 BaseUI is a minimal UI builder for Luau. It's designed to be type-safe, terse
 in its syntax, and highly extensible by allowing people to tap into the core
 library to create their own GUI elements or widgets. It also exposes APIs such
