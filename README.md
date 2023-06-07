@@ -13,12 +13,12 @@ A peek at its syntax:
 
 ```lua
 local inventoryItem = function (props: { itemName: string })
-  return (
-    gui.frame({ Styles = "w-1/2 h-1/2 bg-red-300", Name = "InventoryItem" }, {
-      gui.textLabel({ Styles = "text-scaled", Name = "InventoryItemName" }, {
-        props.itemName,
-      })
-    })
-  )
+    return (
+        gui.frame({ Styles = "w-1/2 h-1/2 bg-red-300", Name = "InventoryItem" }, {
+            gui.textLabel({ Styles = "text-scaled", Name = "InventoryItemName" }, {
+                props.itemName, -- text nodes!
+            })
+        })
+    )
 end
 ```
