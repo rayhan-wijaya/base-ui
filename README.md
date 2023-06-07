@@ -22,3 +22,41 @@ local inventoryItem = function (props: { itemName: string })
     )
 end
 ```
+
+## No Virtual DOM. Manage your own state.
+
+BaseUI is meant to be a UI builder and nothing more. It establishes primitives
+for building UI without introducing a memory-hogging solution, making it a more
+general-purpose library.
+
+You can use refs instead, which are dead simple under the hood. They do not use
+abstract code. They're literally just variables referencing the GUI element.
+
+So something like:
+
+```lua
+local frame = Instance.new("Frame")
+-- a variable referencing a GUI element
+```
+
+-would be the similar implementation of refs in BaseUI.
+
+This also allows for a more fine-grained and precise control over your
+elements.
+
+And since there's no virtual dom, every element is not a special object.
+They're just normal elements! Similar to SolidJS.
+
+Which means that in BaseUI, you can seamlessly create code like the following:
+
+```lua
+gui.frame({ Style = "w-1/2 h-1/2 bg-red-900" }, {
+    Instance.new("TextLabel"),
+
+    gui.textLabel({ Style = "text-scaled" }, {
+        "This is a text label"
+    })
+})
+```
+
+They are the same thing.
