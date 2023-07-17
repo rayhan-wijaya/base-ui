@@ -63,6 +63,17 @@ gui.frame({ Style = "w-1/2 h-1/2 bg-red-900" }, {
 
 They are the same thing.
 
+## UI Management with Refs
+
+You might realize a pattern with BaseUI. Providing no virtual dom, and no other
+solution like it, you're going to need to use refs.
+
+Refs are magical, as prevent you to think more about your UI and have a greater
+control over it. BaseUI isn't meant to replace your existing UI code, which may
+use `Instance.new()`, but BaseUI's role is to be a simple library to make UI
+easier. All your updating logic you created in your UI code, can be
+transferrable to BaseUI.
+
 ## Side Note
 
 But straight up, if your UI is already precreated in ScreenGui, not using
