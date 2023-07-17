@@ -30,8 +30,9 @@ BaseUI is meant to be a UI builder and nothing more. It establishes primitives
 for building UI without introducing a memory-hogging solution, making it a more
 general-purpose library.
 
-You can use refs instead, which are dead simple under the hood. They do not use
-abstract code. They're literally just variables referencing the GUI element.
+As for alternatives, you can use refs instead, which are dead simple under the
+hood. They do not use abstract code. They're literally just variables
+referencing the GUI element. Refer to the next section for more detail on refs.
 
 So something like:
 
