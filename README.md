@@ -68,10 +68,10 @@ They are the same thing.
 You might realize a pattern with BaseUI. Providing no virtual dom, and no other
 solution like it, you're going to need to use refs.
 
-Refs are magical, as prevent you to think more about your UI and have a greater
-control over it. BaseUI isn't meant to replace your existing UI code, which may
-use `Instance.new()`, but BaseUI's role is to be a simple library to make UI
-easier. All your updating logic you created in your UI code, can be
+Refs are magical, as they allow you to think more about your UI and have a
+greater control over it. BaseUI isn't meant to replace your existing UI code,
+which may use `Instance.new()`, but BaseUI's role is to be a simple library to
+make UI easier. All your updating logic you created in your UI code, can be
 transferrable to BaseUI.
 
 ## Side Note
