@@ -62,3 +62,11 @@ gui.frame({ Style = "w-1/2 h-1/2 bg-red-900" }, {
 ```
 
 They are the same thing.
+
+## Side Note
+
+But straight up, if your UI is already precreated in ScreenGui, not using
+`Instance.new()` for the UI elements, I generally don't reccommend you migrate
+over to BaseUI. BaseUI creates UI elements without caching it; just like React.
+This argument applies to other libraries like Roact, where UI elements are
+created on the client.
